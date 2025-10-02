@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Navibus | Live Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/map_bus2.css" />
+  
+  <style>
+    /* Make map fill available space */
+    #map {
+      width: 100%;
+      height: calc(100vh - 3rem); /* full viewport height minus some padding */
+      border-radius: 2rem;
+      background: #e5e9f2;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar toggler button for mobile -->
+  <button class="sidebar-toggler d-lg-none" id="sidebarToggle" aria-label="Toggle sidebar">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Sidebar -->
+  <nav class="sidebar d-flex flex-column align-items-center" id="sidebar" role="navigation" aria-label="Main navigation">
+    <img src="https://img.icons8.com/fluency/96/bus.png" alt="Navibus Logo" class="logo mb-3" />
+    <h1 class="navibus-title mb-4">Navibus</h1>
+    <ul class="nav flex-column w-100 text-center" role="menu">
+      <li class="nav-item" role="none"><a class="nav-link" href="/html/user-dashboard.html" role="menuitem"><i class="fas fa-home me-2"></i>Home</a></li>
+      <li class="nav-item" role="none"><a class="nav-link active" href="/html/map1.html" role="menuitem"><i class="fas fa-map me-2"></i>Map</a></li>
+      <li class="nav-item" role="none"><a class="nav-link" href="/html/bus-route.html" role="menuitem"><i class="fas fa-route me-2"></i>Bus Routes</a></li>
+      <li class="nav-item" role="none"><a class="nav-link" href="/html/user-account.html" role="menuitem"><i class="fas fa-user-circle me-2"></i>Account</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content -->
+  <main class="main-content" id="mainContent" role="main">
+   <section class="map-section py-4">
+      <div class="container-fluid px-3">
+        <div class="row justify-content-center mb-3">
+          <div class="col-12 col-md-8 col-lg-6">
+            <!--<div class="search-box glassy p-3 rounded-4 shadow" data-aos="fade-down">
+              <form id="searchForm" class="d-flex gap-2" role="search" aria-label="Search places or stops">
+                <input type="search" id="searchBox" class="form-control form-control-lg rounded-3" placeholder="Search place or stop..." autocomplete="off" required aria-required="true" />
+                <button type="submit" class="btn btn-primary btn-lg rounded-pill px-4" aria-label="Search">
+                  <i class="fas fa-search me-2"></i>Search
+                </button>
+              </form>
+            </div>-->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <div class="rounded-map shadow-lg mx-auto" data-aos="zoom-in" style="max-width: 100%;">
+              <div id="map" tabindex="0" aria-label="Map showing bus route and live location"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer text-center">
+    &copy; 2025 Navibus. All rights reserved.
+  </footer>
+
+  <!-- JS Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Your JS -->
+  <script type="module" src="/js/map_bus2.js"></script>
+</body>
+</html>

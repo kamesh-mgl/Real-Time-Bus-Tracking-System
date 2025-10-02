@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | Navibus</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/signup.css"/>
+</head>
+<body class="signup-bg">
+
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card glassy-signup shadow-lg p-4 signup-card">
+      <div class="text-center mb-3">
+        <img src="https://img.icons8.com/fluency/64/bus.png" alt="Navibus Logo" class="mb-2" style="border-radius: 1rem;">
+        <h2 class="fw-bold mb-2 text-primary">Create Account</h2>
+        <div class="mb-2 text-secondary">Sign up for Navibus</div>
+      </div>
+      <form id="signupForm" novalidate>
+        <div class="mb-3">
+          <label for="username" class="form-label fw-semibold">Username</label>
+          <input type="text" class="form-control form-control-lg rounded-3" id="username" placeholder="Enter username" required>
+          <div id="usernameFeedback" class="invalid-feedback"></div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label fw-semibold">Email</label>
+          <input type="email" class="form-control form-control-lg rounded-3" id="email" placeholder="Enter email" required>
+          <div id="emailFeedback" class="invalid-feedback"></div>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label fw-semibold">Password</label>
+          <div class="input-group">
+            <input type="password" class="form-control form-control-lg rounded-3" id="password" placeholder="Create a password" required>
+            <span class="input-group-text eye-icon" id="togglePassword" style="cursor:pointer;">
+              <i class="fa-regular fa-eye" id="eyeIcon"></i>
+            </span>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label fw-semibold">Confirm Password</label>
+          <div class="input-group">
+            <input type="password" class="form-control form-control-lg rounded-3" id="confirmPassword" placeholder="Confirm password" required>
+            <span class="input-group-text eye-icon" id="toggleConfirmPassword" style="cursor:pointer;">
+              <i class="fa-regular fa-eye" id="eyeIconConfirm"></i>
+            </span>
+          </div>
+          <div id="confirmFeedback" class="invalid-feedback"></div>
+        </div>
+       <!--- <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" value="" id="terms" required>
+          <label class="form-check-label small" for="terms">
+            I agree to the <a href="#" class="text-primary">Terms &amp; Conditions</a>
+          </label>
+        </div>-->
+        <div class="d-grid mb-2">
+          <button type="submit" class="btn btn-primary btn-lg rounded-pill shadow-sm" id="signupBtn">
+            <span id="btnText">Sign Up</span>
+            <span id="btnSpinner" class="spinner-border spinner-border-sm text-light d-none" role="status" aria-hidden="true"></span>
+          </button>
+        </div>
+       <!-- <div class="d-grid mb-2">
+          <button type="button" class="btn btn-outline-primary btn-lg rounded-pill shadow-sm" disabled>
+            <i class="fab fa-google me-2"></i>Sign Up with Google
+          </button>
+        </div>-->
+      </form>
+      <div class="text-center mt-3">
+        <span class="small">Already have an account?</span>
+        <a href="../html/login.html" class="text-primary fw-semibold small">Login</a>
+      </div>
+      <div class="toast-container position-fixed top-0 end-0 p-3" id="toastContainer"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="/js/signup.js"></script>
+  <script>
+    // Password eye toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      // Password field
+      const togglePassword = document.getElementById('togglePassword');
+      const passwordInput = document.getElementById('password');
+      const eyeIcon = document.getElementById('eyeIcon');
+      togglePassword.addEventListener('click', function () {
+        const type = passwordInput.type === 'password' ? 'text' : 'password';
+        passwordInput.type = type;
+        eyeIcon.classList.toggle('fa-eye');
+        eyeIcon.classList.toggle('fa-eye-slash');
+      });
+      // Confirm password field
+      const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+      const confirmPasswordInput = document.getElementById('confirmPassword');
+      const eyeIconConfirm = document.getElementById('eyeIconConfirm');
+      toggleConfirmPassword.addEventListener('click', function () {
+        const type = confirmPasswordInput.type === 'password' ? 'text' : 'password';
+        confirmPasswordInput.type = type;
+        eyeIconConfirm.classList.toggle('fa-eye');
+        eyeIconConfirm.classList.toggle('fa-eye-slash');
+      });
+    });
+  </script>
+</body>
+</html>

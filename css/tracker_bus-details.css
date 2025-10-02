@@ -1,0 +1,159 @@
+body, html {
+  font-family: 'Inter', sans-serif;
+  background: #f6f8fa !important;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 70px;
+  background: #fff;
+  box-shadow: 2px 0 16px rgba(0, 93, 255, 0.07);
+  z-index: 1040;
+  padding-top: 2rem;
+}
+
+.icon-link {
+  background: #fff;
+  border-radius: 50%;
+  padding: 0.7rem;
+  box-shadow: 0 2px 8px rgba(0,93,255,0.08);
+  transition: box-shadow 0.2s, background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.icon-link:hover {
+  background: #e6f0ff;
+  box-shadow: 0 4px 16px rgba(51, 174, 255, 0.18);
+  text-decoration: none;
+}
+
+.hamburger {
+  z-index: 1100;
+}
+.mobile-menu {
+  position: absolute;
+  top: 3.5rem;
+  left: 0;
+  min-width: 180px;
+  border-radius: 0.7rem;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(51, 174, 255, 0.18);
+}
+
+#searchForm input {
+  border-radius: 0.375rem;
+  box-shadow: 0 2px 8px rgba(0,93,255,0.08);
+  transition: box-shadow 0.3s ease;
+}
+#searchForm input:focus {
+  box-shadow: 0 0 10px #33aeff;
+  outline: none;
+}
+
+#busList .bus-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.12);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.3s ease;
+}
+#busList .bus-card:hover {
+  box-shadow: 0 12px 48px rgba(51, 174, 255, 0.3);
+}
+
+.bus-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.bus-card-header h5 {
+  margin: 0;
+  font-weight: 600;
+  color: #005dff;
+}
+
+.bus-card-header button {
+  border: none;
+  background: none;
+  color: #33aeff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.bus-card-header button:hover {
+  color: #005dff;
+}
+
+.bus-details {
+  margin-bottom: 1rem;
+}
+
+.bus-details label {
+  font-weight: 600;
+  color: #333;
+}
+
+.bus-details p, .bus-details input {
+  margin: 0.25rem 0 0.75rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.bus-details input {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+  transition: border-color 0.3s ease;
+}
+
+.bus-details input:focus {
+  outline: none;
+  border-color: #33aeff;
+  box-shadow: 0 0 8px #33aeff;
+}
+
+.bus-card-footer {
+  text-align: right;
+}
+
+.bus-card-footer button {
+  background: #005dff;
+  border: none;
+  color: white;
+  padding: 0.375rem 1.25rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.bus-card-footer button:hover {
+  background: #33aeff;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    display: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #busList {
+    padding: 0 1rem;
+  }
+}
+.bus-details textarea {
+  resize: vertical;
+  min-height: 50px;
+  margin-bottom: 1rem;
+}

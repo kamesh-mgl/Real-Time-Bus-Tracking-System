@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Navibus</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/user-dashboard.css">
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <button class="sidebar-toggler d-lg-none" id="sidebarToggle" aria-label="Open sidebar">
+    <i class="fas fa-bars"></i>
+  </button>
+  <nav class="sidebar d-flex flex-column align-items-center" id="sidebar">
+    <img src="https://img.icons8.com/fluency/96/bus.png" alt="Navibus Logo" class="logo mb-3">
+    <h1 class="navibus-title mb-4">Navibus</h1>
+    <ul class="nav flex-column w-100 text-center">
+      <li class="nav-item"><a class="nav-link active" href="/html/user-dashboard.html"><i class="fas fa-home me-2"></i>Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="/html/map1.html"><i class="fas fa-map me-2"></i>Map</a></li>
+      <li class="nav-item"><a class="nav-link" href="/html/bus-route.html"><i class="fas fa-route me-2"></i>Bus Routes</a></li>
+      <li class="nav-item"><a class="nav-link" href="/html/user-account.html"><i class="fas fa-user-circle me-2"></i>Account</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main-content" id="mainContent">
+    <!-- Hero Section with Curved Edges -->
+    <section class="hero-section curved-hero" id="home">
+      <div class="container">
+        <div class="hero-content" data-aos="fade-right">
+          <img src="https://img.icons8.com/fluency/96/bus.png" alt="Navibus Logo" class="hero-logo">
+          <h2>Welcome to Navibus</h2>
+          <p>Navigate your city with real-time bus tracking, smart route planning, and seamless transit information.</p>
+          <a href="/html/bus-route.html" class="btn btn-primary shadow">Explore Routes <i class="fas fa-arrow-right ms-2"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="widgets-section" id="services">
+      <div class="container">
+        <h3 class="section-title" data-aos="fade-right">What We Offer</h3>
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up">
+            <div class="widget-card">
+              <i class="fas fa-bus"></i>
+              <h5>Live Bus Tracking</h5>
+              <p>Monitor buses in real-time for a stress-free commute experience.</p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="widget-card">
+              <i class="fas fa-route"></i>
+              <h5>Smart Route Planner</h5>
+              <p>Find the fastest and most efficient routes with real-time updates and optimized directions for your journey.</p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="widget-card">
+              <i class="fas fa-clock"></i>
+              <h5>Accurate Timings</h5>
+              <p>Up-to-date schedules and expected arrival times for every bus.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cities Section -->
+    <section class="cities-section py-5 bg-light">
+      <div class="container">
+        <h3 class="section-title text-center mb-4" data-aos="fade-up">Available In These Cities</h3>
+        <div class="d-flex flex-wrap justify-content-center gap-4 mb-4" data-aos="zoom-in">
+          <div class="city-card d-flex flex-column align-items-center">
+            <img src="https://img.icons8.com/color/48/000000/city.png" alt="Salem" class="city-icon mb-2">
+            <span class="city-badge">Salem</span>
+          </div>
+          <div class="city-card d-flex flex-column align-items-center">
+            <img src="https://img.icons8.com/color/48/000000/city-hall.png" alt="Dharmapuri" class="city-icon mb-2">
+            <span class="city-badge">Dharmapuri</span>
+          </div>
+          <div class="city-card d-flex flex-column align-items-center">
+           <img src="https://img.icons8.com/color/48/city.png" alt="Namakkal" class="city-icon mb-2">
+            <span class="city-badge">Namakkal</span>
+          </div>
+          <div class="city-card d-flex flex-column align-items-center">
+            <img src="https://img.icons8.com/color/48/city-buildings.png" alt="Krishnagiri" class="city-icon mb-2">
+            <span class="city-badge">Krishnagiri</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section
+    <section class="map-section py-5">
+      <div class="container">
+        <h3 class="section-title text-center mb-4" data-aos="fade-up">See Our Service Area</h3>
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="rounded-map shadow-lg mx-auto" style="max-width: 600px;">
+              <a href="/html/map1.html" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/India_Tamil_Nadu_location_map.svg/600px-India_Tamil_Nadu_location_map.svg.png" alt="Service Area Map" class="img-fluid">
+              </a>
+            </div>
+            <p class="text-muted mt-2">Click the map to explore our service area in detail.</p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Plan Your Trip Section -->
+    <section class="plan-trip-section py-5 bg-light">
+      <div class="container">
+        <h3 class="section-title text-center mb-4" data-aos="fade-up">Plan Your Trip</h3>
+        <div class="row justify-content-center">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+            <form class="trip-form glassy p-4 rounded-4 shadow-lg mb-4 d-flex flex-column flex-md-row gap-3 align-items-stretch">
+              <input type="text" class="form-control form-control-lg rounded-3" placeholder="Source" required>
+              <input type="text" class="form-control form-control-lg rounded-3" placeholder="Destination" required>
+              <button type="submit" class="btn btn-primary btn-lg rounded-pill px-4">Search</button>
+            </form>
+          </div>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+            <div class="widget-card glassy">
+              <i class="fas fa-search-location fa-2x mb-2"></i>
+              <h6>Nearest Bus Stop</h6>
+              <p>Find the closest bus stop from your location.</p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="widget-card glassy">
+              <i class="fas fa-random fa-2x mb-2"></i>
+              <h6>Best Route Suggestion</h6>
+              <p>Get the optimal route based on current traffic and timings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section py-5">
+      <div class="container">
+        <h3 class="section-title text-center mb-4" data-aos="fade-up">About Navibus</h3>
+        <div class="row justify-content-center">
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+            <div class="about-card glassy p-4 rounded-4 shadow-lg">
+              <p class="mb-3">
+                <strong>Navibus</strong> is dedicated to transforming your everyday commute. With a focus on real-time accuracy, user-friendly interfaces, and seamless navigation, we empower travelers to make smarter, faster, and more informed transit decisions. Our platform integrates advanced GPS, AI-driven route planning, and up-to-date schedules to ensure a smooth journey for everyone.
+              </p>
+              <p class="mb-0">
+                Whether you're a daily commuter or a first-time visitor, Navibus is your trusted companion for city travel in Salem, Dharmapuri, Namakkal, and Krishnagiri. We believe in accessibility, transparency, and innovation-making public transport reliable and convenient for all.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section py-5 bg-light">
+      <div class="container">
+        <h3 class="section-title text-center mb-4" data-aos="fade-up">Let's Talk</h3>
+        <div class="row g-5 align-items-center justify-content-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <form class="contact-form glassy p-4 rounded-4 shadow-lg">
+              <input type="text" class="form-control mb-3 rounded-3" placeholder="Your Name" required>
+              <input type="email" class="form-control mb-3 rounded-3" placeholder="Email Address" required>
+              <textarea class="form-control mb-3 rounded-3" rows="5" placeholder="Message" required></textarea>
+              <button class="btn btn-primary btn-lg w-100 rounded-pill">Send Message</button>
+            </form>
+          </div>
+          <div class="col-lg-5" data-aos="fade-left">
+            <div class="contact-details ms-lg-4">
+              <div class="detail mb-3"><i class="fas fa-envelope me-2 text-primary"></i> hello@navibus.com</div>
+              <div class="detail mb-3"><i class="fas fa-phone me-2 text-primary"></i> +91 9894057495 </div>
+              <div class="detail mb-3"><i class="fas fa-map-marker-alt me-2 text-primary"></i> Gce - Dpi</div>
+              <div class="mt-4">
+                <a href="#" class="social-icon me-2" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon me-2" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon me-2" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+      <div class="container text-center text-light">
+        &copy; 2024 Navibus. All rights reserved.
+      </div>
+    </footer>
+  </div>
+
+  <!-- Bootstrap JS, AOS, and Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Animate on every scroll, not just once
+    AOS.init({ duration: 900, once: false });
+
+    // Plan your trip form redirect (demo)
+    document.querySelector('.trip-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      window.location.href = '/html/bus-route.html'; // Change to your trip results page
+    });
+
+    // Sidebar toggle for mobile
+    document.addEventListener('DOMContentLoaded', function () {
+      const sidebar = document.getElementById('sidebar');
+      const sidebarToggle = document.getElementById('sidebarToggle');
+      const mainContent = document.getElementById('mainContent');
+
+      sidebarToggle.addEventListener('click', function () {
+        sidebar.classList.toggle('open');
+        mainContent.classList.toggle('sidebar-open');
+      });
+
+      // Close sidebar when a nav link is clicked (on mobile)
+      sidebar.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function () {
+          if (window.innerWidth < 992) {
+            sidebar.classList.remove('open');
+            mainContent.classList.remove('sidebar-open');
+          }
+        });
+      });
+
+      // Optional: Close sidebar when clicking outside (on mobile)
+      document.addEventListener('click', function(event) {
+        if (
+          window.innerWidth < 992 &&
+          sidebar.classList.contains('open') &&
+          !sidebar.contains(event.target) &&
+          event.target !== sidebarToggle &&
+          !sidebarToggle.contains(event.target)
+        ) {
+          sidebar.classList.remove('open');
+          mainContent.classList.remove('sidebar-open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

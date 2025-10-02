@@ -1,0 +1,345 @@
+:root {
+    --primary: #2563eb;
+    --secondary: #4f46e5;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --glass: rgba(255,255,255,0.92);
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--light);
+    color: var(--dark);
+    overflow-x: hidden;
+  }
+  
+  .sidebar {
+    min-height: 100vh;
+    background: rgba(30,41,59,0.82);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(31,38,135,0.10);
+    border-radius: 0 2rem 2rem 0;
+    padding: 2rem 1.5rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 240px;
+    z-index: 1030;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: left 0.4s;
+  }
+  .sidebar .logo {
+    width: 64px;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 12px rgba(37,99,235,0.07);
+  }
+  .navibus-title {
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 2rem;
+  }
+  .sidebar .nav-link {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    border-radius: 0.75rem;
+    padding: 0.7rem 1rem;
+    transition: background 0.2s, color 0.2s;
+  }
+  .sidebar .nav-link.active,
+  .sidebar .nav-link:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+  .sidebar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 1100;
+  }
+  .main-content {
+    margin-left: 240px;
+    transition: margin-left 0.4s;
+  }
+  @media (max-width: 991px) {
+    .sidebar {
+      left: -260px;
+      border-radius: 0 1.5rem 1.5rem 0;
+    }
+    .sidebar.open {
+      left: 0;
+    }
+    .sidebar-toggler {
+      display: block;
+    }
+    .main-content {
+      margin-left: 0;
+      transition: margin-left 0.4s;
+    }
+    .sidebar.open ~ .main-content,
+    .main-content.sidebar-open {
+      margin-left: 240px;
+    }
+  }
+  @media (max-width: 767px) {
+    .main-content {
+      margin-left: 0;
+    }
+  }
+  
+  /* Hero Section with Curved Edges */
+  .curved-hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(120deg, #6366f1 0%, #2563eb 100%);
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 3rem 3rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(31,38,135,0.10);
+  }
+  .curved-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 60%, rgba(255,255,255,0.08) 0%, transparent 70%);
+    animation: hero-bg-move 12s linear infinite alternate;
+    z-index: 0;
+  }
+  @keyframes hero-bg-move {
+    0% { background-position: 20% 60%; }
+    100% { background-position: 80% 40%; }
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    color: #fff;
+    padding: 3rem 0;
+  }
+  .hero-content .hero-logo {
+    width: 80px;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 12px rgba(37,99,235,0.07);
+  }
+  .hero-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+    line-height: 1.15;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 2.2rem;
+    color: #e0e7ef;
+  }
+  .hero-content .btn-primary {
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.85rem 2.2rem;
+    border-radius: 2rem;
+    background: linear-gradient(90deg, #2563eb, #6366f1 100%);
+    border: none;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px rgba(37,99,235,0.13);
+  }
+  .hero-content .btn-primary:hover {
+    background: linear-gradient(90deg, #6366f1, #2563eb 100%);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(37,99,235,0.18);
+  }
+  
+  /* Glassy Cards */
+  .glassy, .trip-form, .about-card, .contact-form {
+    background: var(--glass);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px rgba(31,38,135,0.09);
+    border: none;
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+  
+  /* Widgets & Services */
+  .widget-card, .service-card {
+    border-radius: 2rem;
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--glass);
+    box-shadow: 0 8px 32px rgba(31,38,135,0.10);
+  }
+  .widget-card:hover, .service-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 40px rgba(31,38,135,0.16);
+  }
+  .widget-card i, .service-card i {
+    font-size: 2.2rem;
+    margin-bottom: 1.1rem;
+    color: var(--primary);
+    background: linear-gradient(120deg, #6366f1 40%, #2563eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .widget-card h5, .service-card h5, .widget-card h6 {
+    font-weight: 600;
+    color: var(--dark);
+  }
+  .widget-card p, .service-card p {
+    color: #64748b;
+    font-size: 1.01rem;
+    margin-bottom: 0;
+  }
+  
+  /* Cities Section */
+  .city-card {
+    min-width: 110px;
+    max-width: 140px;
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 12px rgba(37,99,235,0.07);
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .city-card:hover {
+    transform: translateY(-5px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(37,99,235,0.13);
+  }
+  .city-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+  }
+  .city-badge {
+    background: var(--glass);
+    border-radius: 2rem;
+    padding: 0.5rem 1.2rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--primary);
+    box-shadow: 0 2px 12px rgba(37,99,235,0.07);
+    display: inline-block;
+    transition: background 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+  .city-badge:hover {
+    background: #e0e7ef;
+    transform: scale(1.06);
+  }
+  
+  /* Map Section */
+  .rounded-map {
+    border-radius: 2rem;
+    overflow: hidden;
+    display: inline-block;
+    box-shadow: 0 8px 32px rgba(31,38,135,0.10);
+  }
+  .rounded-map img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+  }
+  
+  /* Plan Trip */
+  .trip-form input {
+    min-width: 0;
+  }
+  .trip-form button {
+    min-width: 140px;
+  }
+  
+  /* About */
+  .about-card {
+    font-size: 1.1rem;
+    color: #374151;
+    border-radius: 2rem;
+  }
+  
+  /* Contact */
+  .contact-form input, .contact-form textarea {
+    border-radius: 1.2rem;
+    border: 2px solid #e2e8f0;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.10);
+  }
+  .contact-details .detail {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.07rem;
+  }
+  .contact-details .detail i {
+    font-size: 1.4rem;
+    margin-right: 1rem;
+  }
+  
+  /* Social Icons */
+  .social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(37,99,235,0.08);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    color: var(--primary);
+    margin: 0 0.35rem;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+  }
+  .social-icon:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: translateY(-3px) scale(1.1);
+  }
+  
+  /* Footer */
+  .footer {
+    background: linear-gradient(90deg, #1e293b 60%, #6366f1 100%);
+    color: #e0e7ef;
+    border-radius: 2rem 2rem 0 0;
+    font-size: 1rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 991px) {
+    .curved-hero {
+      text-align: center;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    .curved-hero .hero-logo {
+      margin: 0 auto 2rem auto;
+    }
+    .footer {
+      border-radius: 1.2rem 1.2rem 0 0;
+    }
+  }
+  

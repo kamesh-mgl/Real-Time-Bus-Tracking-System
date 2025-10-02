@@ -1,0 +1,107 @@
+body, html {
+  font-family: 'Inter', sans-serif;
+  background: #f6f8fa !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 70px;
+  background: #fff;
+  box-shadow: 2px 0 16px rgba(0, 93, 255, 0.07);
+  z-index: 1040;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-link {
+  background: #fff;
+  border-radius: 50%;
+  padding: 0.7rem;
+  box-shadow: 0 2px 8px rgba(0,93,255,0.08);
+  transition: box-shadow 0.2s, background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+.icon-link:hover {
+  background: #e6f0ff;
+  box-shadow: 0 4px 16px rgba(51, 174, 255, 0.18);
+  text-decoration: none;
+}
+
+/* Hamburger */
+.hamburger {
+  z-index: 1100;
+}
+.mobile-menu {
+  position: absolute;
+  top: 3.5rem;
+  left: 0;
+  min-width: 160px;
+  border-radius: 0.7rem;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(51, 174, 255, 0.18);
+  user-select: none;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid #e9ecef;
+}
+.mobile-menu a:hover {
+  background-color: #e6f0ff;
+  color: #005dff;
+}
+
+/* Main container adjustment for sidebar */
+@media (min-width: 768px) {
+  .container {
+    margin-left: 70px !important;
+  }
+}
+
+/* Profile card */
+.profile-card {
+  border: 1px solid #e9ecef;
+}
+
+.form-label {
+  font-size: 1rem;
+}
+
+input[readonly] {
+  background-color: #e9ecef;
+  opacity: 1;
+  cursor: default;
+}
+
+.btn-danger {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover, .btn-danger:focus {
+  background-color: #c82333;
+}
+
+/* Responsive tweaks */
+@media (max-width: 767.98px) {
+  .container {
+    margin-left: 0 !important;
+  }
+}

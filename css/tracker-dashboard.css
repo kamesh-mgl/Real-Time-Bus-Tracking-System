@@ -1,0 +1,120 @@
+body, html {
+  font-family: 'Inter', sans-serif;
+  background: #f6f8fa !important;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 70px;
+  background: #fff;
+  box-shadow: 2px 0 16px rgba(0, 93, 255, 0.07);
+  z-index: 1040;
+  padding-top: 2rem;
+}
+
+.icon-link {
+  background: #fff;
+  border-radius: 50%;
+  padding: 0.7rem;
+  box-shadow: 0 2px 8px rgba(0,93,255,0.08);
+  transition: box-shadow 0.2s, background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-link:hover {
+  background: #e6f0ff;
+  box-shadow: 0 4px 16px rgba(51, 174, 255, 0.18);
+  text-decoration: none;
+}
+
+.hamburger {
+  z-index: 1100;
+}
+.mobile-menu {
+  position: absolute;
+  top: 3.5rem;
+  left: 0;
+  min-width: 160px;
+  border-radius: 0.7rem;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(51, 174, 255, 0.18);
+}
+
+.dashboard-card, .welcome-section, .bus-form-section {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
+  border: 1px solid #e9ecef;
+  margin-bottom: 2rem;
+}
+
+.welcome-section {
+  padding: 2rem 2rem 1.2rem 2rem;
+  transition: box-shadow 0.3s;
+}
+
+.bus-form-section {
+  padding: 2rem 2rem 2rem 2rem;
+  transition: box-shadow 0.3s;
+}
+
+.form-label i {
+  font-size: 1.1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #005dff 0%, #33aeff 100%);
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(.4,2,.6,1);
+  box-shadow: 0 2px 8px rgba(0,93,255,0.08);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background: linear-gradient(90deg, #33aeff 0%, #005dff 100%);
+  box-shadow: 0 4px 18px rgba(0,93,255,0.12);
+}
+
+.success-tick {
+  font-size: 1.1rem;
+  color: #4BB543;
+}
+
+.toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1080;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    display: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .welcome-section, .bus-form-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .welcome-section h2 {
+    font-size: 1.2rem;
+  }
+}
+/* Add any additional styling for towns textarea */
+#towns {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Optional: Adjust form spacing */
+.bus-form-section .form-text {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
