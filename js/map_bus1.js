@@ -1,16 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { getDatabase, ref, onChildAdded } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
 
-// Firebase config
-const firebaseConfig = {
-  apiKey: "AIzaSyBlc56ShmKg__wr2Kf-1V-I1-eQBD5TjLw",
-  authDomain: "gpstracker-a7277.firebaseapp.com",
-  databaseURL: "https://gpstracker-a7277-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "gpstracker-a7277",
-  storageBucket: "gpstracker-a7277.appspot.com",
-  messagingSenderId: "345140392144",
-  appId: "1:345140392144:web:1db3cb10ac4be067aeeed5"
-};
+
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
